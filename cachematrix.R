@@ -1,6 +1,11 @@
 ## Assignment: Caching the Inverse of a Matrix
-## Yevgeniy SAMYSHKIN
-
+## Yevgeniy SAMYSHKIN, 22 Feb 2015
+## This sumission contains:
+## A. The two finctions with brief comment on each 
+## B. Describes data used to test teh functions 
+## C. Describes hoqw to test the intended functionality of the data
+## Note: the task is reproducible with the code and data in this assignment  
+ 
 
 
 ## The function  makeCacheMatrix() creates a special vector (list) that contains a function to 
@@ -28,17 +33,6 @@ makeCacheMatrix <- function(x = matrix()) {
 ## it initially checks the inverse of the matrix has been calculated and if so it obtains 
 ## the inverse from the cache 
 
-## This can be tested by running the following sequence: 
-## 1. define function makeCacheMatrix()
-## 2. define function cacheSolve()
-## 3. define data 
-## 4. run xx<-makeCacheMatrix(matr)
-## 5. run get_inverse <-cacheSolve(xx) - this perfoems matrix inversion and generates no message
-## 6. ruN the above line again (or any subsequent number of times) get_inverse <-cacheSolve(xx)
-## 7. this generates message 'getting cached data' which suggests that prior calculation was retrieved from cache 
-
-## Input to this function is an arbitrary invertible matrix 10x10  shown in the Annex 
-
  
 cacheSolve <- function(x, ...) {
         m <- x$getinverse()
@@ -54,6 +48,21 @@ cacheSolve <- function(x, ...) {
 
 ## The syntax is based on the Coursera assignment 
 
+
+
+## The work of these functions can be tested by performing the following steps: 
+## 1. define function makeCacheMatrix() in R
+## 2. define function cacheSolve() in R
+## 3. define data (code for constructing a martrix from vectors - below)
+## 4. run xx<-makeCacheMatrix(matr)
+## 5. run get_inverse <-cacheSolve(xx) ## this perfoems matrix inversion and generates no message
+## 6. run the above line again (or any subsequent number of times): get_inverse <-cacheSolve(xx)
+## 7. this generates message 'getting cached data' which suggests that prior calculation was retrieved from cache into a matrix  get_inverse 
+
+## Input to this function is an arbitrary invertible matrix 10x10  shown in the Annex 
+
+
+## ================ A N N E X - D A T A  ============
 
 ## data - an arbitrary invertible matrix I have created 
 
